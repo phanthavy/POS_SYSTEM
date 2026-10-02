@@ -15,7 +15,7 @@ export default function Input({
   ...props
 }: Readonly<InputProps>) {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {children && (
         <span className="absolute right-4 top-1/2 -translate-y-1/2 bg-[#FFFFFF] border border-[#BCCAC0] text-[#006948] rounded-full">
           {children}
@@ -23,7 +23,7 @@ export default function Input({
       )}
       <input
         {...props}
-        className={`${className} w-xl bg-[#F2F3FF] rounded-full py-2 px-6 border-2 border-[#BCCAC0]`}
+        className={`${className} w-full bg-[#F2F3FF] rounded-full py-2 px-6 border-2 border-[#BCCAC0]`}
         disabled={disabled}
         placeholder={placehodler}
       />

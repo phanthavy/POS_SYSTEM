@@ -5,14 +5,16 @@ import { CiLogout } from "react-icons/ci";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between px-4 py-2 items-center bg-[#FFFFFF] border-b-2 border-[#BCCAC0] h-16">
+    <div className="flex justify-between gap-2 px-3 md:px-4 py-2 items-center bg-[#FFFFFF] border-b-2 border-[#BCCAC0] h-16">
       {/*  */}
-      <div>
-        <h1 className="font-bold text-[#006948] text-xl">POS SYSTEM</h1>
-        <h1 className="text-[#6D7A72] text-[12px]">Artisan Bakery & Café</h1>
+      <div className="shrink-0">
+        <h1 className="font-bold text-[#006948] text-lg md:text-xl">
+          POS SYSTEM
+        </h1>
+        <h1 className="text-[#6D7A72] text-[12px]">Bobby Restuarant</h1>
       </div>
       {/*  */}
-      <div>
+      <div className="hidden md:block flex-1 max-w-xl mx-4">
         <Input
           placehodler="search..."
           className="outline-none hover:border-[#6D7A72] focus:border-[#6D7A72] transition-colors duration-150"
@@ -24,14 +26,16 @@ export default function Navbar() {
         </Input>
       </div>
       {/*  */}
-      <div className="h-full flex gap-4">
+      <div className="h-full flex gap-2 md:gap-4">
         <button className=" flex items-center gap-2 rounded-full border-2 border-[#9f1919] px-2 active:scale-101 cursor-pointer bg-[#BA1A1A]">
           <CiLogout className="text-white" />
-          <p className="text-[12px] text-[#ffffff] font-semibold">Clock out</p>
+          <p className="hidden sm:block text-[12px] text-[#ffffff] font-semibold">
+            Clock out
+          </p>
         </button>
 
         <button className=" flex items-center gap-2 rounded-full bg-[#F2F3FF] border-2 border-[#BCCAC0] px-2 active:scale-101 cursor-pointer">
-          <p className="text-[12px] text-[#6D7A72] font-semibold">
+          <p className="hidden sm:block text-[12px] text-[#6D7A72] font-semibold">
             Shift: 8am - 5pm
           </p>
           <CgProfile size={25} className="text-[#6D7A72]" />
